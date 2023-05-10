@@ -22,7 +22,7 @@ jobs:
       - name: Deploy on github pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_TOKEN }}
           publish_dir: ./test_docs/build
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]

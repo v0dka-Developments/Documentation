@@ -59,7 +59,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Olmteka tset',
+        title: 'Olmteka tsetasdasd',
        
         items: [
           {

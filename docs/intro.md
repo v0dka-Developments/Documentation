@@ -36,30 +36,30 @@ notes
 
 :::note
 
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+Some **content** with _Markdown_ `syntax`.(#).
 
 :::
 
 :::tip
 
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+Some **content** with _Markdown_ `syntax`. (#).
 
 :::
 
 :::info
 
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+Some **content** with _Markdown_ `syntax`. (#).
 
 :::
 
 :::caution
 
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+Some **content** with _Markdown_ `syntax`. (#).
 
 :::
 
 :::danger
 
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+Some **content** with _Markdown_ `syntax`. (#).
 
 :::

@@ -1,30 +1,52 @@
-name: Deploy on github pages
+# .github/workflows/deploy.yml
 
-on: 
+name: GitHub Pages
+
+on:
   push:
-    branches: [main]
-    paths: [test_docs/**]
+    branches:
+      - main
+    paths:
+      - '.github/workflows/deploy.yml'
+      - 'test_docs/**'
+  pull_request:
 
 jobs:
   deploy:
-    name: Deploy on github pages
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    defaults:
+      run:
+        working-directory: test_docs
     steps:
-      - uses: actions/checkout@2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 14.x
-          cache: yarn
-      - name: Build Website
-       working-directory: test_docs
-       run: |
-        yarn install --frozen-lockfile
-        tarn build
+      - uses: actions/checkout@v3
 
-      - name: Deploy on github pages
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "YARN_CACHE_DIR=$(yarn cache dir)" >> "${GITHUB_OUTPUT}"
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache.outputs.YARN_CACHE_DIR }}
+          key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-website-
+
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./test_docs/build
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com

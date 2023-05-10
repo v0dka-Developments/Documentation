@@ -15,10 +15,11 @@ jobs:
           node-version: 14.x
           cache: yarn
       - name: Build Website
-        working-directory: test_docs
         run: |
+          cd ./test_docs
           yarn install --frozen-lockfile
           yarn build
+        working-directory: .
       - name: Deploy on github pages
         uses: peaceiris/actions-gh-pages@v3
         with:

@@ -1,0 +1,30 @@
+name: Deploy on github pages
+
+on: 
+  push:
+    branches: [main]
+    paths: [test_docs/**]
+
+jobs:
+  deploy:
+    name: Deploy on github pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          cache: yarn
+      - name: Build Website
+       working-directory: test_docs
+       run: |
+        yarn install --frozen-lockfile
+        tarn build
+
+      - name: Deploy on github pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./test_docs/build
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com

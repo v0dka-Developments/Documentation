@@ -1,15 +1,11 @@
-# .github/workflows/deploy.yml
-
-name: GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
       - main
-    paths:
-      - '.github/workflows/deploy.yml'
-      - 'test_docs/**'
-  pull_request:
+    # Review gh actions docs if you want to further define triggers, paths, etc
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 jobs:
   deploy:

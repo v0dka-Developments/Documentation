@@ -16,7 +16,6 @@ jobs:
           cache: yarn
       - name: Build Website
         run: |
-          cd ./test_docs
           yarn install --frozen-lockfile
           yarn build
         working-directory: .

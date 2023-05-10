@@ -1,6 +1,6 @@
 name: Deploy on github pages
 
-on: 
+on:
   push:
     branches: [main]
 
@@ -13,11 +13,11 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14.x
-          cache: yarn
+          cache: 'npm'
       - name: Build Website
         run: |
-          yarn install --frozen-lockfile
-          yarn build
+          npm install
+          npm run build
         working-directory: .
       - name: Deploy on github pages
         uses: peaceiris/actions-gh-pages@v3

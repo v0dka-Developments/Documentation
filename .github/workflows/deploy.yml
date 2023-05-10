@@ -10,7 +10,7 @@ jobs:
     name: Deploy on github pages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@2
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: 14.x
@@ -20,7 +20,6 @@ jobs:
         run: |
           yarn install --frozen-lockfile
           yarn build
-
       - name: Deploy on github pages
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -28,3 +27,5 @@ jobs:
           publish_dir: ./test_docs/build
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]
+          publish_branch: gh-pages
+          commit_message: "Deployed to gh-pages branch"

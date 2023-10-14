@@ -73,7 +73,7 @@ const config = {
       footer: {
         style: 'dark',
         links: [],
-        copyright: `Copyright © ${new Date().getFullYear()} Olmteka`,
+        copyright: `Copyright © ${new Date().getFullYear()} Integrity Roleplay`,
       },
       prism: {
         theme: darkCodeTheme,

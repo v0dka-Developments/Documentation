@@ -19,3 +19,7 @@ If you do not see a Data Folder in the Directory then type in %ProgramData%
 ![alt-text](https://i.gyazo.com/3d4dcaac2c04877cf32bc364df3963ed.png?raw=true)
 
 Then type in C:\ProgramData\MySQL\MySQL Server 8.0\Data and you should see the Logs.
+
+**Do not Acces files if the server is running**
+
+Make sure to go and Stop the Service before Accessing the Files.

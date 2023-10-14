@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcconline_docs=self.webpackChunkcconline_docs||[]).push([[609],{4680:e=>{e.exports=JSON.parse('{"title":"PHP - API","description":"The PHP API","slug":"/category/php---api","permalink":"/test_docs/docs/category/php---api","navigation":{"next":{"title":"Login (username,password)","permalink":"/test_docs/docs/Website/Olmteka/PHP - API/Login"}}}')}}]);

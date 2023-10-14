@@ -1,7 +1,5 @@
 Install Website: https://dev.mysql.com/downloads/installer/
 
-![alt-text](https://i.gyazo.com/52c51c56d3d02d56d400938cc762adc7.png?raw=true)
-
 ![alt-text](https://i.gyazo.com/489cc7baa2efc982b283fbf2fb1bc745.png?raw=true)
 ![alt-text](https://i.gyazo.com/90cdfd396b4bed44091a12ae1fe30234.png?raw=true)
 ![alt-text](https://i.gyazo.com/90cdfd396b4bed44091a12ae1fe30234.png?raw=true)

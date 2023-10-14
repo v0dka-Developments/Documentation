@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Olmteka Docs',
-  tagline: 'Docs for all Olmteka projects',
+  title: 'Integrity Docs',
+  tagline: 'Docs for all Integrity projects',
   
 
   // Set the production url of your site here
@@ -59,7 +59,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Olmteka lmlml123123',
+        title: 'Integrity Docs',
        
         items: [
           {
